@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class MedianinarowwisesortedMatrix {
     public static void main(String[] args) {
         int r=3, c=3;

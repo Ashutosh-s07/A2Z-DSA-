@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class KthelementoftwosortedArray {
+public class KthelementoftwosortedArrays {
     public static void main(String[] args) {
         int arr1[] = {2, 3, 6, 7, 9}; 
         int arr2[] = {1, 4, 8, 10};

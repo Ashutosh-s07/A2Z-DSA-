@@ -8,7 +8,9 @@ public class KthelementoftwosortedArrays {
         System.out.println(kthElement(arr1, arr2, n, m, k));
     }
     static long kthElement( int arr1[], int arr2[], int n, int m, int k) {
+
         if(m > n) {
+         if(m > n) {
         return kthElement(arr2, arr1, m, n, k); 
     }
         
@@ -32,6 +34,7 @@ public class KthelementoftwosortedArrays {
             low = cut1 + 1; 
         }
     }
-    return -1;
-    }
+}
+return -1;
+}
 }

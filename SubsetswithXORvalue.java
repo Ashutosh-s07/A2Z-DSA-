@@ -9,17 +9,14 @@ public class SubsetswithXORvalue {
         System.out.println(subsetXOR(arr, N, k));
     }
 
-    static int subsetXOR(int arr[], int n, int m) {
-        HashMap<Integer, Integer> HashTable = new HashMap<>();
-        HashTable.put(0, 1);
-        int count = 0, curSum = 0;
-        for (int i = 0; i < n; i++) {
-            curSum ^= arr[i];
-        if (HashTable.containsKey(curSum ^ m))
-            count += HashTable.get(curSum ^ m);
-        if (!HashTable.containsKey(curSum))
-            HashTable.put(curSum, 0);
-            HashTable.put(curSum,HashTable.get(curSum) + 1);
+    static int subsetXOR(int arr[], int n, int k) {
+        HashMap<Integer, Integer> mp = new HashMap<>();
+        mp.put(0, 1);
+        int count = 0, xor = 0;
+        for (int i = 0; i < n; i++) {  xor ^= arr[i];
+        if (mp.containsKey(xor ^ k))  count += mp.get(xor ^ k);
+        if (!mp.containsKey(xor))     mp.put(xor, 0);
+        mp.put(xor,mp.get(xor) + 1);
         }
         return (count);
     }
